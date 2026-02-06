@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Book Recommender</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/recommender.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>📚 Readify</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="recommender.html">Recommender</a>
+  </nav>
+</header>
+
+<main class="tracker">
+
+  <h2>Random Book Recommender</h2>
+
+  <select id="genre">
+    <option value="all">All Genres</option>
+    <option value="fantasy">Fantasy</option>
+    <option value="sci-fi">Sci-Fi</option>
+    <option value="fiction">Fiction</option>
+  </select>
+
+  <button onclick="recommend()">Pick Book</button>
+
+  <h3 id="output"></h3>
+
+  <button onclick="saveBook()">Save to Reading List</button>
+
+  <h3>My List</h3>
+  <ul id="list"></ul>
+
+</main>
+
+</body>
+</html>
