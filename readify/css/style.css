@@ -1,0 +1,349 @@
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  background:#fffaf5;
+}
+
+/* NAVBAR */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:white;
+  position:sticky;
+  top:0;
+}
+
+.nav img{
+  vertical-align:middle;
+  margin-right:6px;
+}
+
+
+.links{
+  display:flex;
+  gap:20px;
+}
+
+.links a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+
+.hamburger{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  .links{
+    display:none;
+    flex-direction:column;
+  }
+
+  .links.show{
+    display:flex;
+  }
+
+  .hamburger{
+    display:block;
+  }
+}
+
+
+/* HERO FULL WIDTH */
+.hero-full{
+  height:70vh;
+  background:url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+.hero-content{
+  background:rgba(0,0,0,0.6);
+  color:white;
+  padding:50px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.hero-content h1{
+  font-size:2.5rem;
+}
+
+/* center all page content */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+
+/* featured */
+.featured{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.logo{
+  color:#ff8fab;
+  font-weight:bold;
+}
+
+/* GRID CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:20px;
+  padding:30px;
+}
+
+.card{
+  background:white;
+  border-radius:10px;
+  padding:10px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-box{
+  background:white;
+  width:400px;
+  max-width:90%;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  animation:pop .2s ease;
+  text-align:center;
+}
+
+@keyframes pop{
+  from{transform:scale(.9);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+.modal-box h3{
+  margin-bottom:10px;
+}
+
+.modal-box table{
+  width:100%;
+  margin-top:10px;
+  border-collapse:collapse;
+}
+
+.modal-box td{
+  padding:6px;
+}
+
+.close-btn{
+  float:right;
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* ========= SEARCH BAR ========= */
+.search-bar{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin:30px 0;
+}
+
+.search-bar input{
+  width:320px;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+.search-bar button{
+  padding:10px 18px;
+  border:none;
+  background:#ff8fab;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.search-bar button:hover{
+  opacity:.9;
+}
+
+/* PROGRESS */
+.progress{
+  background:#eee;
+  height:20px;
+  border-radius:10px;
+}
+
+.bar{
+  height:100%;
+  width:0;
+  background:#ff8fab;
+  transition:1s;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;}
+  .links{display:none;flex-direction:column;}
+  .links.show{display:flex;}
+  .hamburger{display:block;}
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:#fafafa;
+}
+
+/* =========================
+   CUTE PAGE CARDS (tracker/pick/flow/feedback)
+   ========================= */
+
+.tracker,
+.recommender,
+.flow,
+.feedback{
+  max-width:600px;
+  margin:40px auto;
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+/* headings */
+.tracker h2,
+.recommender h2,
+.flow h2,
+.feedback h2{
+  margin-bottom:25px;
+}
+
+/* inputs */
+.tracker input,
+.recommender input,
+.flow input,
+.feedback input,
+textarea,
+select{
+  width:100%;
+  padding:10px 12px;
+  margin:8px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-family:'Poppins',sans-serif;
+}
+
+/* buttons */
+.tracker button,
+.recommender button,
+.flow button,
+.feedback button{
+  background:#ff8fab;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:10px;
+  cursor:pointer;
+  margin-top:8px;
+  transition:.2s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  opacity:.9;
+}
+
+/* prettier lists */
+ul{
+  list-style:none;
+  padding:0;
+  margin-top:15px;
+}
+
+ul li{
+  background:#fff3f6;
+  margin:6px 0;
+  padding:8px 10px;
+  border-radius:8px;
+}
+
+/* progress bar nicer */
+.progress{
+  margin-top:15px;
+  height:22px;
+  background:#eee;
+  border-radius:20px;
+}
+
+.bar{
+  background:#ff8fab;
+  height:100%;
+  border-radius:20px;
+}
+
+/* result text */
+#result{
+  margin-top:12px;
+  font-weight:600;
+}
+html {
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Buttons */
+button {
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Book cards */
+.card {
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
